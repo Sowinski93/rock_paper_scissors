@@ -1,0 +1,1 @@
+Basic rock, paper, scissors game using javascript to be played from the console.
