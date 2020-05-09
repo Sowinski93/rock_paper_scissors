@@ -6,7 +6,39 @@
 </head>
 <body>
   <script>
-    // Your JavaScript goes here!
+  function computerPlay(){
+let options = ['rock','paper','scissors'];
+let computerSelection = options[Math.floor(Math.random()*options.length)];
+return computerSelection;
+}
+function humanPlay(){
+let playerSelection = prompt('Rock, Paper or Scissors?');
+playerSelection = playerSelection.toLowerCase();
+return playerSelection;
+}
+const computerSelection = computerPlay()
+const playerSelection = humanPlay()
+function playRound(playerSelection,computerSelection){
+ if(playerSelection === 'rock' && computerSelection === 'scissors'){
+    return 'Win! The computer chose scissors.';}
+    else if(playerSelection === 'rock' && computerSelection === 'paper'){
+  return 'Lose! The computer chose paper.';}
+  else if(playerSelection === 'rock' && computerSelection === 'rock'){
+  return 'Draw! The computer also chose rock.';}
+  else if(playerSelection === 'paper' && computerSelection === 'rock'){
+  return 'Win! The computer chose rock.';}
+  else if(playerSelection === 'paper' && computerSelection === 'scissors'){
+  return 'Lose! The computer chose scissors.';}
+  else if(playerSelection === 'paper' && computerSelection === 'paper'){
+  return 'Draw! The computer also chose paper.';}
+  else if(playerSelection === 'scissors' && computerSelection === 'paper'){
+  return 'Win! The computer chose paper.';}
+  else if (playerSelection === 'scissors' && computerSelection === 'rock'){
+  return 'Lose! The computer chose rock.';}
+  else if (playerSelection === 'scissors' && computerSelection === 'scissors'){
+  return 'Draw! The computer also chose scissors.';}
+}
+console.log(playRound(playerSelection,computerSelection))
     console.log("Hello, World!")
   </script>
 </body>
